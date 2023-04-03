@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/oil_now_signature"
+    android:orientation="vertical"
+    tools:context=".ui.HomeFragment">
+
+    <com.amar.library.ui.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:stickyHeader="@+id/home_sticky_header">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="13dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageButton
+                            android:id="@+id/electric_charging"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/electriccharging" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:text="@string/electric_charging"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="13dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="12dp">
+
+                        <ImageButton
+                            android:id="@+id/gas_station"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/gasstation" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"
+                            android:text="@string/gas_station"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <FrameLayout
+                android:id="@+id/home_sticky_header"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:background="@drawable/home_frame_layout_shape">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/my_car_management"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="44dp"
+                            android:layout_marginTop="28dp"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/carmanagement"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/my_car_management_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_car_manangement"
+                            app:layout_constraintTop_toBottomOf="@id/my_car_management"
+                            app:layout_constraintStart_toStartOf="@id/my_car_management"
+                            app:layout_constraintEnd_toEndOf="@id/my_car_management"/>
+
+                        <ImageButton
+                            android:id="@+id/oil_price_trend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="45dp"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/oilpricetrend"
+                            app:layout_constraintStart_toEndOf="@id/my_car_management"
+                            app:layout_constraintTop_toTopOf="@id/my_car_management" />
+
+                        <TextView
+                            android:id="@+id/oil_price_trend_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/oil_price_trend"
+                            app:layout_constraintStart_toStartOf="@id/oil_price_trend"
+                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend"
+                            app:layout_constraintEnd_toEndOf="@id/oil_price_trend"/>
+
+                        <ImageButton
+                            android:id="@+id/shopping"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:background="@color/white"
+                            android:src="@drawable/shopping"
+                            android:importantForAccessibility="no"
+                            app:layout_constraintBottom_toBottomOf="@+id/oil_price_trend"
+                            app:layout_constraintStart_toEndOf="@+id/oil_price_trend" />
+
+                        <TextView
+                            android:id="@+id/shopping_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:text="@string/shopping"
+                            app:layout_constraintStart_toStartOf="@id/shopping"
+                            app:layout_constraintTop_toBottomOf="@id/shopping"
+                            app:layout_constraintEnd_toEndOf="@id/shopping"/>
+
+                        <ImageButton
+                            android:id="@+id/community"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginEnd="30dp"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/community"
+                            app:layout_constraintBottom_toBottomOf="@+id/shopping"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/shopping" />
+
+                        <TextView
+                            android:id="@+id/community_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/community"
+                            app:layout_constraintStart_toStartOf="@id/community"
+                            app:layout_constraintTop_toBottomOf="@id/community"
+                            app:layout_constraintEnd_toEndOf="@id/community"/>
+
+                        <ImageButton
+                            android:id="@+id/benefit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/benefit"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            app:layout_constraintStart_toStartOf="@id/my_car_management"
+                            app:layout_constraintTop_toBottomOf="@id/my_car_management_text"/>
+
+                        <TextView
+                            android:id="@+id/benefit_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/benefit"
+                            app:layout_constraintStart_toStartOf="@id/benefit"
+                            app:layout_constraintTop_toBottomOf="@id/benefit"
+                            app:layout_constraintEnd_toEndOf="@id/benefit"/>
+
+                        <ImageButton
+                            android:id="@+id/choose_second_car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/secondcar"
+                            android:background="@color/white"
+                            android:importantForAccessibility="no"
+                            app:layout_constraintStart_toStartOf="@id/oil_price_trend"
+                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend_text"
+                            app:layout_constraintBottom_toBottomOf="@id/benefit"/>
+
+                        <TextView
+                            android:id="@+id/choose_second_car_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/choosing_second_car"
+                            app:layout_constraintStart_toStartOf="@id/choose_second_car"
+                            app:layout_constraintTop_toBottomOf="@id/choose_second_car"
+                            app:layout_constraintEnd_toEndOf="@id/choose_second_car"
+                            app:layout_constraintBottom_toBottomOf="@id/benefit_text"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </ScrollView>
+
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.amar.library.ui.StickyScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
