@@ -264,6 +264,17 @@
                             app:layout_constraintTop_toBottomOf="@id/benefit_text"
                             app:layout_constraintEnd_toEndOf="parent"/>
 
+                        <TextView
+                            android:id="@+id/home_viewpager_page_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="5dp"
+                            android:textSize="12sp"
+                            android:background="@drawable/home_viewpager_page_number_background"
+                            app:layout_constraintStart_toStartOf="@id/home_viewpager"
+                            app:layout_constraintBottom_toBottomOf="@id/home_viewpager"
+                            tools:text="1/5"/>
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </ScrollView>

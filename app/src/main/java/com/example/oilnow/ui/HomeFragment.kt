@@ -12,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.oilnow.R
 import com.example.oilnow.adapter.ViewPagerAadapter
 import com.example.oilnow.databinding.FragmentHomeBinding
+import kotlin.math.ceil
 
 class HomeFragment : Fragment() {
 
@@ -23,6 +24,7 @@ class HomeFragment : Fragment() {
     private lateinit var handler: Handler
     private lateinit var imageList: MutableList<Int>
     private lateinit var adapter: ViewPagerAadapter
+    private var viewPagerPosition = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,16 +42,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewPagerInit()
-
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                handler.removeCallbacks(runnable)
-                handler.postDelayed(runnable, 2500)
-            }
-        })
+        initViewPager()
     }
+
+    private val runnable = Runnable {
+        viewPager2.currentItem = viewPager2.currentItem + 1
+    }
+
 
     override fun onPause() {
         super.onPause()
@@ -68,7 +67,7 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-    private fun viewPagerInit() {
+    private fun initViewPager() {
         viewPager2 = binding.homeViewpager
         handler = Handler(Looper.myLooper()!!)
         imageList = mutableListOf(
@@ -78,14 +77,30 @@ class HomeFragment : Fragment() {
             android.R.color.holo_blue_light,
             android.R.color.holo_purple
         )
+        val originalListSize = imageList.size
+
+        binding.homeViewpagerPageNumber.text =
+            getString(R.string.viewpager_page_number, 1, originalListSize)
 
         adapter = ViewPagerAadapter(imageList, viewPager2)
         viewPager2.adapter = adapter
-        viewPager2.background = ContextCompat.getDrawable(requireContext(), R.drawable.viewpager2_round_corner)
-    }
+        viewPager2.clipToOutline = true
 
-    private val runnable = Runnable {
-        viewPager2.currentItem = viewPager2.currentItem + 1
-    }
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
 
+                viewPagerPosition = position
+                binding.homeViewpagerPageNumber.text =
+                    getString(
+                        R.string.viewpager_page_number,
+                        viewPagerPosition % originalListSize + 1,
+                        originalListSize
+                    )
+
+                handler.removeCallbacks(runnable)
+                handler.postDelayed(runnable, 2500)
+            }
+        })
+    }
 }

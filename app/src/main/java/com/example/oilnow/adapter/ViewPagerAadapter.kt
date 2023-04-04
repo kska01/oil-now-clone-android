@@ -52,5 +52,6 @@ class ViewPagerAadapter(
     private val runnable = Runnable {
         imageList.addAll(imageList)
         notifyDataSetChanged()
+
     }
 }

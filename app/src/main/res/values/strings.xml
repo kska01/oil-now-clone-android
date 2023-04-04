@@ -22,4 +22,7 @@
     <string name="come_with_more_information" translatable="false">내일은 저 유용한 정보로/n찾아올게요</string>
     <string name="home_ending_ment" translatable="false">운전의 모든 고민을 해결하는</string>
     <string name="oil_now" translatable="false">오일나우</string>
+
+    <!-- ViewPager2 -->
+    <string name="viewpager_page_number" translatable="false">%1$d/%2$d</string>
 </resources>
