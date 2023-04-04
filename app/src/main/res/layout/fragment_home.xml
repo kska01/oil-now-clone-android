@@ -56,6 +56,7 @@
                             android:layout_marginStart="20dp"
                             android:text="@string/electric_charging"
                             android:textSize="17sp"
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -93,6 +94,7 @@
                             android:layout_marginStart="35dp"
                             android:text="@string/gas_station"
                             android:textSize="17sp"
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -134,6 +136,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/my_car_manangement"
+                            android:textColor="@color/black"
                             app:layout_constraintTop_toBottomOf="@id/my_car_management"
                             app:layout_constraintStart_toStartOf="@id/my_car_management"
                             app:layout_constraintEnd_toEndOf="@id/my_car_management"/>
@@ -154,6 +157,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/oil_price_trend"
+                            android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="@id/oil_price_trend"
                             app:layout_constraintTop_toBottomOf="@id/oil_price_trend"
                             app:layout_constraintEnd_toEndOf="@id/oil_price_trend"/>
@@ -175,6 +179,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
                             android:text="@string/shopping"
+                            android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="@id/shopping"
                             app:layout_constraintTop_toBottomOf="@id/shopping"
                             app:layout_constraintEnd_toEndOf="@id/shopping"/>
@@ -197,6 +202,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/community"
+                            android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="@id/community"
                             app:layout_constraintTop_toBottomOf="@id/community"
                             app:layout_constraintEnd_toEndOf="@id/community"/>
@@ -217,6 +223,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/benefit"
+                            android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="@id/benefit"
                             app:layout_constraintTop_toBottomOf="@id/benefit"
                             app:layout_constraintEnd_toEndOf="@id/benefit"/>
@@ -239,10 +246,23 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="@string/choosing_second_car"
+                            android:textColor="@color/black"
                             app:layout_constraintStart_toStartOf="@id/choose_second_car"
                             app:layout_constraintTop_toBottomOf="@id/choose_second_car"
                             app:layout_constraintEnd_toEndOf="@id/choose_second_car"
                             app:layout_constraintBottom_toBottomOf="@id/benefit_text"/>
+                        
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/home_viewpager"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:background="@drawable/viewpager2_round_corner"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/benefit_text"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
