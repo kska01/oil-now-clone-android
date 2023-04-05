@@ -3,16 +3,16 @@ package com.example.oilnow.ui
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.oilnow.R
+import com.example.oilnow.adapter.NewsRecyclerViewAdapter
 import com.example.oilnow.adapter.ViewPagerAadapter
 import com.example.oilnow.databinding.FragmentHomeBinding
-import kotlin.math.ceil
 
 class HomeFragment : Fragment() {
 
@@ -24,6 +24,7 @@ class HomeFragment : Fragment() {
     private lateinit var handler: Handler
     private lateinit var imageList: MutableList<Int>
     private lateinit var adapter: ViewPagerAadapter
+    private lateinit var newsRecyclerView: RecyclerView
     private var viewPagerPosition = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +44,11 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initViewPager()
+
+        with(binding) {
+            newsRecyclerView = oilNowNewsRecyclerview
+            newsRecyclerView.adapter = NewsRecyclerViewAdapter()
+        }
     }
 
     private val runnable = Runnable {

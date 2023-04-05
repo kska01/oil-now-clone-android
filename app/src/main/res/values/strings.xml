@@ -12,6 +12,8 @@
     <string name="community" translatable="false">카뮤니티</string>
     <string name="benefit" translatable="false">혜택</string>
     <string name="choosing_second_car" translatable="false">둘째 고르기</string>
+    <string name="apply_test_drive" translatable="false">시승 신청</string>
+
     <string name="emergency_accident_report" translatable="false">긴급 사고 접수</string>
     <string name="car_insurance" translatable="false">자동차 보험</string>
     <string name="oil_now_news" translatable="false">오일나우 소식</string>
@@ -25,4 +27,20 @@
 
     <!-- ViewPager2 -->
     <string name="viewpager_page_number" translatable="false">%1$d/%2$d</string>
+
+    <!-- Favorite gas station -->
+    <string name="favorite_gas_station" translatable="false">단골 주유소</string>
+    <string name="setup_favorite_gas_station" translatable="false">단골 주유소를 설정해 보세요!</string>
+    <string name="go_setup_favorite_gas_station" translatable="false">설정하러 가기!</string>
+
+    <!-- Oil News -->
+    <string name="story_of_oilNow" translatable="false">오일나우 이야기</string>
+    <string name="event" translatable="false">이벤트</string>
+    <string name="news" translatable="false">뉴스</string>
+    <string name="utilization" translatable="false">활용백서</string>
+    <string name="story_description" translatable="false">오일나우 플랫폼시티 주유소 오픈</string>
+    <string name="event_description" translatable="false">주유소 오픈 이벤트</string>
+    <string name="news_description" translatable="false">자동차 보험료 2% 인하</string>
+    <string name="util_description_1" translatable="false">비싼 주유소, 단번에 걸러내기</string>
+    <string name="util_description_2" translatable="false">전기차 충전 빈자리 알림 받기</string>
 </resources>

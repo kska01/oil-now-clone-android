@@ -55,8 +55,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="20dp"
                             android:text="@string/electric_charging"
-                            android:textSize="17sp"
                             android:textColor="@color/black"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -93,8 +93,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="35dp"
                             android:text="@string/gas_station"
-                            android:textSize="17sp"
                             android:textColor="@color/black"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -107,7 +107,7 @@
             <FrameLayout
                 android:id="@+id/home_sticky_header"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/home_frame_layout_shape">
 
                 <ScrollView
@@ -137,9 +137,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/my_car_manangement"
                             android:textColor="@color/black"
-                            app:layout_constraintTop_toBottomOf="@id/my_car_management"
+                            app:layout_constraintEnd_toEndOf="@id/my_car_management"
                             app:layout_constraintStart_toStartOf="@id/my_car_management"
-                            app:layout_constraintEnd_toEndOf="@id/my_car_management"/>
+                            app:layout_constraintTop_toBottomOf="@id/my_car_management" />
 
                         <ImageButton
                             android:id="@+id/oil_price_trend"
@@ -158,9 +158,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/oil_price_trend"
                             android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="@id/oil_price_trend"
                             app:layout_constraintStart_toStartOf="@id/oil_price_trend"
-                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend"
-                            app:layout_constraintEnd_toEndOf="@id/oil_price_trend"/>
+                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend" />
 
                         <ImageButton
                             android:id="@+id/shopping"
@@ -168,8 +168,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="36dp"
                             android:background="@color/white"
-                            android:src="@drawable/shopping"
                             android:importantForAccessibility="no"
+                            android:src="@drawable/shopping"
                             app:layout_constraintBottom_toBottomOf="@+id/oil_price_trend"
                             app:layout_constraintStart_toEndOf="@+id/oil_price_trend" />
 
@@ -180,9 +180,9 @@
                             android:layout_marginStart="15dp"
                             android:text="@string/shopping"
                             android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="@id/shopping"
                             app:layout_constraintStart_toStartOf="@id/shopping"
-                            app:layout_constraintTop_toBottomOf="@id/shopping"
-                            app:layout_constraintEnd_toEndOf="@id/shopping"/>
+                            app:layout_constraintTop_toBottomOf="@id/shopping" />
 
                         <ImageButton
                             android:id="@+id/community"
@@ -203,20 +203,20 @@
                             android:layout_height="wrap_content"
                             android:text="@string/community"
                             android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="@id/community"
                             app:layout_constraintStart_toStartOf="@id/community"
-                            app:layout_constraintTop_toBottomOf="@id/community"
-                            app:layout_constraintEnd_toEndOf="@id/community"/>
+                            app:layout_constraintTop_toBottomOf="@id/community" />
 
                         <ImageButton
                             android:id="@+id/benefit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="30dp"
-                            android:src="@drawable/benefit"
                             android:background="@color/white"
                             android:importantForAccessibility="no"
+                            android:src="@drawable/benefit"
                             app:layout_constraintStart_toStartOf="@id/my_car_management"
-                            app:layout_constraintTop_toBottomOf="@id/my_car_management_text"/>
+                            app:layout_constraintTop_toBottomOf="@id/my_car_management_text" />
 
                         <TextView
                             android:id="@+id/benefit_text"
@@ -224,21 +224,21 @@
                             android:layout_height="wrap_content"
                             android:text="@string/benefit"
                             android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="@id/benefit"
                             app:layout_constraintStart_toStartOf="@id/benefit"
-                            app:layout_constraintTop_toBottomOf="@id/benefit"
-                            app:layout_constraintEnd_toEndOf="@id/benefit"/>
+                            app:layout_constraintTop_toBottomOf="@id/benefit" />
 
                         <ImageButton
                             android:id="@+id/choose_second_car"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="30dp"
-                            android:src="@drawable/secondcar"
                             android:background="@color/white"
                             android:importantForAccessibility="no"
+                            android:src="@drawable/secondcar"
+                            app:layout_constraintBottom_toBottomOf="@id/benefit"
                             app:layout_constraintStart_toStartOf="@id/oil_price_trend"
-                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend_text"
-                            app:layout_constraintBottom_toBottomOf="@id/benefit"/>
+                            app:layout_constraintTop_toBottomOf="@id/oil_price_trend_text" />
 
                         <TextView
                             android:id="@+id/choose_second_car_text"
@@ -247,33 +247,226 @@
                             android:layout_marginTop="5dp"
                             android:text="@string/choosing_second_car"
                             android:textColor="@color/black"
-                            app:layout_constraintStart_toStartOf="@id/choose_second_car"
-                            app:layout_constraintTop_toBottomOf="@id/choose_second_car"
+                            app:layout_constraintBottom_toBottomOf="@id/benefit_text"
                             app:layout_constraintEnd_toEndOf="@id/choose_second_car"
-                            app:layout_constraintBottom_toBottomOf="@id/benefit_text"/>
-                        
+                            app:layout_constraintStart_toStartOf="@id/choose_second_car"
+                            app:layout_constraintTop_toBottomOf="@id/choose_second_car" />
+
+                        <ImageButton
+                            android:id="@+id/apply_test_drive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:src="@drawable/testdrive"
+                            android:background="@color/white"
+                            app:layout_constraintStart_toStartOf="@id/shopping_text"
+                            app:layout_constraintTop_toTopOf="@id/choose_second_car"/>
+
+                        <TextView
+                            android:id="@+id/apply_test_drive_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/apply_test_drive"
+                            android:textColor="@color/black"
+                            app:layout_constraintStart_toStartOf="@id/apply_test_drive"
+                            app:layout_constraintEnd_toEndOf="@id/apply_test_drive"
+                            app:layout_constraintBottom_toBottomOf="@id/choose_second_car_text"/>
+
                         <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/home_viewpager"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
-                            android:layout_marginTop="30dp"
                             android:layout_marginStart="25dp"
+                            android:layout_marginTop="30dp"
                             android:layout_marginEnd="25dp"
                             android:background="@drawable/viewpager2_round_corner"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/benefit_text"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toBottomOf="@id/benefit_text" />
 
                         <TextView
                             android:id="@+id/home_viewpager_page_number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/home_viewpager_page_number_background"
                             android:paddingHorizontal="5dp"
                             android:textSize="12sp"
-                            android:background="@drawable/home_viewpager_page_number_background"
-                            app:layout_constraintStart_toStartOf="@id/home_viewpager"
                             app:layout_constraintBottom_toBottomOf="@id/home_viewpager"
-                            tools:text="1/5"/>
+                            app:layout_constraintStart_toStartOf="@id/home_viewpager"
+                            tools:text="1/5" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/emergency_insurance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/home_viewpager">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/emergency_report_cardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/gray_home_cardView"
+                                app:cardCornerRadius="13dp"
+                                app:cardElevation="0dp">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="15dp"
+                                    android:paddingBottom="15dp">
+
+                                    <ImageButton
+                                        android:id="@+id/emergency_report"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:background="@color/white"
+                                        android:importantForAccessibility="no"
+                                        android:src="@drawable/report"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="18dp"
+                                        android:text="@string/emergency_accident_report"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/car_insurance_cardView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/gray_home_cardView"
+                                app:cardCornerRadius="13dp"
+                                app:cardElevation="0dp">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingTop="15dp"
+                                    android:paddingBottom="12dp">
+
+                                    <ImageButton
+                                        android:id="@+id/car_insurance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="1dp"
+                                        android:layout_marginStart="15dp"
+                                        android:background="@color/white"
+                                        android:importantForAccessibility="no"
+                                        android:src="@drawable/insurance" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="20dp"
+                                        android:text="@string/car_insurance"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:id="@+id/favorite_gas_station"
+                            style="@style/homeScreenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/favorite_gas_station"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/emergency_insurance" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/favorite_cardView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="25dp"
+                            app:cardElevation="4dp"
+                            android:backgroundTint="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/favorite_gas_station"
+                            app:layout_constraintTop_toBottomOf="@id/favorite_gas_station">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="40dp"
+                                    android:layout_gravity="center"
+                                    android:text="@string/setup_favorite_gas_station"
+                                    android:textColor="@color/black"
+                                    android:textSize="23sp"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginBottom="40dp"
+                                    android:padding="10dp"
+                                    android:text="@string/go_setup_favorite_gas_station"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black"
+                                    android:backgroundTint="@color/gray_home_cardView"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/oilNow_news"
+                            style="@style/homeScreenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/oil_now_news"
+                            app:layout_constraintTop_toBottomOf="@id/favorite_cardView"
+                            app:layout_constraintStart_toStartOf="@id/favorite_cardView" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/oilNow_news_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginTop="30dp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintTop_toBottomOf="@id/oilNow_news"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
