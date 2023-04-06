@@ -9,8 +9,8 @@
     </style>
 
     <!-- OilNow News CardView Style -->
-    <style name="oilNews.cardView" parent="Widget.MaterialComponents.CardView">
-        <item name="android:textSize">20sp</item>
+    <style name="oilNews.cardView.description" parent="Widget.MaterialComponents.CardView">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
     </style>

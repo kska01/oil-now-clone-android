@@ -1,5 +1,6 @@
 package com.example.oilnow.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -16,10 +17,12 @@ class NewsRecyclerViewAdapter :
     inner class NewsViewHolder(binding: RecyclerviewOilNewsLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+            @SuppressLint("UseCompatLoadingForDrawables")
             fun bind(item: OilNews) {
                 binding.apply {
                     newsImage.setImageResource(item.image)
                     newsTitle.text = itemView.context.getString(item.title)
+                    newsTitle.background = itemView.context.getDrawable(item.background)
                     newsDescription.text = itemView.context.getString(item.description)
                 }
             }
@@ -28,7 +31,7 @@ class NewsRecyclerViewAdapter :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): NewsRecyclerViewAdapter.NewsViewHolder {
+    ): NewsViewHolder {
         binding = RecyclerviewOilNewsLayoutBinding
             .inflate(
                 LayoutInflater.from(parent.context),

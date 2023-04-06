@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="240dp"
+    android:layout_height="340dp"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/news_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/news_description"
+            android:importantForAccessibility="no"
             tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
@@ -27,8 +32,7 @@
             android:layout_marginStart="10dp"
             android:paddingHorizontal="10dp"
             android:paddingVertical="2dp"
-            android:background="@drawable/news_title_background_shape"
-            android:backgroundTint="@color/oil_story_title_back"
+            android:background="@drawable/title_background_news_shape"
             android:text="@string/story_of_oilNow"
             android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,13 +40,17 @@
 
         <TextView
             android:id="@+id/news_description"
-            style="@style/oilNews.cardView"
-            android:layout_width="wrap_content"
+            style="@style/oilNews.cardView.description"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/story_description"
             app:layout_constraintTop_toBottomOf="@id/news_image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

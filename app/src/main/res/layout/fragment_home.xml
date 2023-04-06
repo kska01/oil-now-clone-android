@@ -8,7 +8,8 @@
     android:orientation="vertical"
     tools:context=".ui.HomeFragment">
 
-    <com.amar.library.ui.StickyScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sticky_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:stickyHeader="@+id/home_sticky_header">
@@ -110,10 +111,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/home_frame_layout_shape">
 
-                <ScrollView
+                <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:ignore="UselessParent">
+                    android:layout_height="wrap_content">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -259,6 +259,7 @@
                             android:layout_marginStart="7dp"
                             android:src="@drawable/testdrive"
                             android:background="@color/white"
+                            android:importantForAccessibility="no"
                             app:layout_constraintStart_toStartOf="@id/shopping_text"
                             app:layout_constraintTop_toTopOf="@id/choose_second_car"/>
 
@@ -410,6 +411,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="25dp"
+                            app:cardCornerRadius="10dp"
                             app:cardElevation="4dp"
                             android:backgroundTint="@color/white"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -460,22 +462,27 @@
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/oilNow_news_recyclerview"
                             android:layout_width="match_parent"
-                            android:layout_height="300dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingHorizontal="15dp"
+                            android:clipToPadding="false"
                             android:orientation="horizontal"
                             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                            app:layout_constraintTop_toBottomOf="@id/oilNow_news"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
+                            app:layout_constraintTop_toBottomOf="@id/oilNow_news"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/recyclerview_oil_news_layout" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </ScrollView>
+                </androidx.core.widget.NestedScrollView>
 
             </FrameLayout>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </com.amar.library.ui.StickyScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

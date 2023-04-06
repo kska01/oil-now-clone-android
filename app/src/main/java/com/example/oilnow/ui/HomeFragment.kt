@@ -7,12 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.oilnow.R
 import com.example.oilnow.adapter.NewsRecyclerViewAdapter
 import com.example.oilnow.adapter.ViewPagerAadapter
 import com.example.oilnow.databinding.FragmentHomeBinding
+import com.example.oilnow.datasource.NewsDataSource
+import com.example.oilnow.models.OilNews
 
 class HomeFragment : Fragment() {
 
@@ -23,8 +26,9 @@ class HomeFragment : Fragment() {
     private lateinit var viewPager2: ViewPager2
     private lateinit var handler: Handler
     private lateinit var imageList: MutableList<Int>
-    private lateinit var adapter: ViewPagerAadapter
+    private lateinit var viewPagerAdapter: ViewPagerAadapter
     private lateinit var newsRecyclerView: RecyclerView
+    private lateinit var newsRecyclerViewAdapter: NewsRecyclerViewAdapter
     private var viewPagerPosition = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,11 +47,24 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val newsDataSource: MutableList<OilNews> = NewsDataSource().loadNewsData()
+
         initViewPager()
+
+//        binding.stickyScrollView.run {
+//            header = binding.homeStickyHeader
+//            stickListener = { _ -> }
+//            freeListener = { _ -> }
+//        }
 
         with(binding) {
             newsRecyclerView = oilNowNewsRecyclerview
-            newsRecyclerView.adapter = NewsRecyclerViewAdapter()
+            newsRecyclerViewAdapter = NewsRecyclerViewAdapter()
+            newsRecyclerViewAdapter.submitList(newsDataSource)
+            newsRecyclerView.adapter = newsRecyclerViewAdapter
+            newsRecyclerView.layoutManager = LinearLayoutManager(requireContext()).also {
+                it.orientation = LinearLayoutManager.HORIZONTAL
+            }
         }
     }
 
@@ -88,8 +105,8 @@ class HomeFragment : Fragment() {
         binding.homeViewpagerPageNumber.text =
             getString(R.string.viewpager_page_number, 1, originalListSize)
 
-        adapter = ViewPagerAadapter(imageList, viewPager2)
-        viewPager2.adapter = adapter
+        viewPagerAdapter = ViewPagerAadapter(imageList, viewPager2)
+        viewPager2.adapter = viewPagerAdapter
         viewPager2.clipToOutline = true
 
         viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
