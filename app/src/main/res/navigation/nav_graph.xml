@@ -10,5 +10,69 @@
         android:id="@+id/homeFragment"
         android:name="com.example.oilnow.ui.HomeFragment"
         android:label="@string/oil_now"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_gasStationFragment"
+            app:destination="@id/gasStationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.oilnow.ui.gasSation.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_gasStationFragment"
+            app:destination="@id/gasStationFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_onWayFragment"
+            app:destination="@id/onWayFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_localCurrencyFragment2"
+            app:destination="@id/localCurrencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/localCurrencyFragment"
+        android:name="com.example.oilnow.ui.gasSation.LocalCurrencyFragment"
+        android:label="fragment_local_currency"
+        tools:layout="@layout/fragment_local_currency" >
+        <action
+            android:id="@+id/action_localCurrencyFragment_to_gasStationFragment"
+            app:destination="@id/gasStationFragment" />
+        <action
+            android:id="@+id/action_localCurrencyFragment_to_onWayFragment"
+            app:destination="@id/onWayFragment" />
+        <action
+            android:id="@+id/action_localCurrencyFragment_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gasStationFragment"
+        android:name="com.example.oilnow.ui.gasSation.GasStationFragment"
+        android:label="fragment_gas_station"
+        tools:layout="@layout/fragment_gas_station" >
+        <action
+            android:id="@+id/action_gasStationFragment_to_localCurrencyFragment"
+            app:destination="@id/localCurrencyFragment" />
+        <action
+            android:id="@+id/action_gasStationFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_gasStationFragment_to_onWayFragment"
+            app:destination="@id/onWayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onWayFragment"
+        android:name="com.example.oilnow.ui.gasSation.OnWayFragment"
+        android:label="fragment_on_way"
+        tools:layout="@layout/fragment_on_way" >
+        <action
+            android:id="@+id/action_onWayFragment_to_gasStationFragment"
+            app:destination="@id/gasStationFragment" />
+        <action
+            android:id="@+id/action_onWayFragment_to_localCurrencyFragment"
+            app:destination="@id/localCurrencyFragment" />
+        <action
+            android:id="@+id/action_onWayFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
 </navigation>

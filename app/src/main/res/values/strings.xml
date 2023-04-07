@@ -2,7 +2,7 @@
     <string name="app_name">OilNow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+
     <!-- Home -->
     <string name="electric_charging" translatable="false">전기차 충전</string>
     <string name="gas_station" translatable="false">주유소</string>
@@ -21,12 +21,21 @@
     <string name="popular_item" translatable="false">인기상품</string>
     <string name="more_item" translatable="false">차량용품 더 보기</string>
     <string name="go_up" translatable="false">맨 위로 올라가기</string>
-    <string name="come_with_more_information" translatable="false">내일은 저 유용한 정보로/n찾아올게요</string>
+    <string name="come_with_more_information" translatable="false">내일은 더 유용한 정보로\n찾아올게요</string>
     <string name="home_ending_ment" translatable="false">운전의 모든 고민을 해결하는</string>
     <string name="oil_now" translatable="false">오일나우</string>
 
     <!-- ViewPager2 -->
     <string name="viewpager_page_number" translatable="false">%1$d/%2$d</string>
+
+    <!-- Gas Station -->
+    <string name="around" translatable="false">내주변</string>
+    <string name="gas_station_on_my_way" translatable="false">경로상주유소</string>
+    <string name="local_currency" translatable="false">지역화폐</string>
+    <string name="favorite" translatable="false">단골</string>
+    <string name="filter" translatable="false">필터</string>
+    <string name="finding_gas_station" translatable="true">원하는 주유소 빨리 찾기</string>
+
 
     <!-- Favorite gas station -->
     <string name="favorite_gas_station" translatable="false">단골 주유소</string>
@@ -38,7 +47,7 @@
     <string name="event" translatable="false">이벤트</string>
     <string name="news" translatable="false">뉴스</string>
     <string name="utilization" translatable="false">활용백서</string>
-    <string name="story_description" translatable="false">오일나우 플랫폼시티 주유소 오픈</string>
+    <string name="story_description" translatable="false">오일나우 플랫폼시티 주유소\n오픈</string>
     <string name="event_description" translatable="false">주유소 오픈 이벤트</string>
     <string name="news_description" translatable="false">자동차 보험료 2% 인하</string>
     <string name="util_description_1" translatable="false">비싼 주유소, 단번에 걸러내기</string>

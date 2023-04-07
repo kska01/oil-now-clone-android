@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/around"
+        android:enabled="true"
+        android:icon="@drawable/search"
+        android:title="@string/around" />
+    <item
+        android:id="@+id/filter"
+        android:enabled="true"
+        android:icon="@drawable/filter"
+        android:title="@string/filter" />
+    <item
+        android:id="@+id/on_way"
+        android:enabled="true"
+        android:icon="@drawable/route"
+        android:title="@string/gas_station_on_my_way"/>
+    <item
+        android:id="@+id/local_currency"
+        android:enabled="true"
+        android:icon="@drawable/card"
+        android:title="@string/local_currency" />
+    <item
+        android:id="@+id/favorite"
+        android:enabled="true"
+        android:icon="@drawable/favorite"
+        android:title="@string/favorite" />
+
+</menu>

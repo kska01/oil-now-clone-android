@@ -32,6 +32,9 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
                     app:cardCornerRadius="13dp">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -65,12 +68,16 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/gas_station_card_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="30dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="13dp">
+                    android:clickable="true"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="13dp"
+                    android:focusable="true">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -472,8 +479,77 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/oilNow_news"
+                            app:layout_constraintBottom_toTopOf="@id/more_information"
                             tools:itemCount="3"
                             tools:listitem="@layout/recyclerview_oil_news_layout" />
+
+                        <TextView
+                            android:id="@+id/more_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:text="@string/come_with_more_information"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/oilNow_news_recyclerview"
+                            app:layout_constraintStart_toStartOf="@id/oilNow_news_recyclerview"
+                            app:layout_constraintEnd_toEndOf="@id/oilNow_news_recyclerview"
+                            app:layout_constraintBottom_toTopOf="@id/up_button"/>
+
+                        <Button
+                            android:id="@+id/up_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:text="@string/go_up"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/gray_home_cardView"
+                            app:layout_constraintTop_toBottomOf="@id/more_information"
+                            app:layout_constraintStart_toStartOf="@id/more_information"
+                            app:layout_constraintEnd_toEndOf="@id/more_information"/>
+
+                        <TextView
+                            android:id="@+id/ending_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="180dp"
+                            android:text="@string/home_ending_ment"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/gray_400"
+                            app:layout_constraintTop_toBottomOf="@id/up_button"
+                            app:layout_constraintStart_toStartOf="@id/up_button"
+                            app:layout_constraintEnd_toEndOf="@id/up_button"/>
+
+                        <TextView
+                            android:id="@+id/oil_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/oil_now"
+                            android:textSize="30sp"
+                            android:textColor="@color/gray_500"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/ending_comment"
+                            app:layout_constraintStart_toStartOf="@id/ending_comment"
+                            app:layout_constraintEnd_toEndOf="@id/ending_comment"
+                            app:layout_constraintBottom_toTopOf="@id/ending_gradient"/>
+
+                        <FrameLayout
+                            android:id="@+id/ending_gradient"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/home_end_gradient"
+                            app:layout_constraintTop_toBottomOf="@id/oil_now"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
